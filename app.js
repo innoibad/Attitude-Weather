@@ -5,7 +5,6 @@ const temp = document.getElementById('temp');
 const status = document.getElementById('status');
 const body = document.body;
 
-/* 🌧️ Rain create */
 function createRain(){
   rainBox.innerHTML = '';
   for(let i = 0; i < 80; i++){
@@ -17,12 +16,10 @@ function createRain(){
   }
 }
 
-/* ❌ Rain remove */
 function removeRain(){
   rainBox.innerHTML = '';
 }
 
-/* 🌤️ Weather fetch */
 function getWeather(cityName){
 
   city.innerHTML = 'Loading...';
@@ -54,7 +51,6 @@ function getWeather(cityName){
   });
 }
 
-/* 🔍 Button */
 document.getElementById('searchBtn').addEventListener('click', () => {
   if(input.value.trim()){
     getWeather(input.value.trim());
@@ -62,7 +58,6 @@ document.getElementById('searchBtn').addEventListener('click', () => {
   }
 });
 
-/* ⌨️ Enter key */
 input.addEventListener('keydown', e => {
   if(e.key === 'Enter'){
     document.getElementById('searchBtn').click();
